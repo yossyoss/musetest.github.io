@@ -12,7 +12,7 @@ const init = () => {
         disclaimerUrl1 : 'www.google.com',
         disclaimerUrl2 : 'https://www.google.com',
         elementsToHide: [],
-        feedId: '81653',
+        feedId: '91017',
   
         font : 'Inter',
   
@@ -44,7 +44,7 @@ const init = () => {
         suggestion5 : '',
         suggestion6: '',
         welcomeMessage: 'eresres',
-        widgetId: '311915'
+        widgetId: '365301'
       });
       muse.openDyChat();
     });
