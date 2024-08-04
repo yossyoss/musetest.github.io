@@ -35,7 +35,7 @@ const init = () => {
         // secondaryColor: 'red',
         sectionId: window.DYO?.section?.toString(),
   
-        selectedStrategy: '258333',
+        // selectedStrategy: '258333',
         similarItemsResponse: 'Here are some simi items',
         suggestion1: 'Summer wedding style inspiration',
         suggestion2: 'I need a trendy handbag',
