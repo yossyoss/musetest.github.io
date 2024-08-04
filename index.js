@@ -1,4 +1,4 @@
-import ShoppingMuse from './chat'
+import ShoppingMuse from './chat.js'
 
 
 const init = () => {
