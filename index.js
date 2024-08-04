@@ -41,7 +41,7 @@ const init = () => {
         suggestion2: 'I need a trendy handbag',
         suggestion3: 'Build a minimalist capsule that will last',
         suggestion4: 'Surprise me!',
-        suggestion5 : '',
+        suggestion5 : 'Surprise me again',
         suggestion6: '',
         welcomeMessage: 'eresres',
         widgetId: '365301'
