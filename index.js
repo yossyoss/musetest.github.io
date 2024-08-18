@@ -2,8 +2,7 @@ import ShoppingMuse from './chat.js'
 
 
 const init = () => {
-    document.addEventListener('DOMContentLoaded', () => {
-      const urlParams = new URLSearchParams(window.location.search);
+  const urlParams = new URLSearchParams(window.location.search);
       const sectionId = urlParams.get('sectionId') || 8788335;
       window.DY = window.DY || {};
       DY.recommendationContext = { type: 'HOMEPAGE' };
@@ -22,6 +21,7 @@ const init = () => {
       const feedIdFromReq = urlParams.get('f') || '91017';
       const sectionIdFromReq = urlParams.get('s')  || window.DYO?.section?.toString();
       const widgetIdFromReq = urlParams.get('w') || '365301';
+    document.addEventListener('DOMContentLoaded', () => {      
 
       const muse = new ShoppingMuse({
         color: '#ff0000',
