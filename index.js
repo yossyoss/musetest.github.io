@@ -3,6 +3,12 @@ import ShoppingMuse from './chat.js'
 
 const init = () => {
     document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+
+      const feedIdFromReq = urlParams.get('f');
+      const sectionIdFromReq = urlParams.get('s');
+      const widgetIdFromReq = urlParams.get('w');
+      
       const muse = new ShoppingMuse({
         color: '#ff0000',
         currencySymbol: '$',
@@ -12,7 +18,7 @@ const init = () => {
         disclaimerUrl1 : 'www.google.com',
         disclaimerUrl2 : 'https://www.google.com',
         elementsToHide: [],
-        feedId: '91017',
+        feedId: feedIdFromReq || '91017',
   
         font : 'Inter',
   
@@ -33,7 +39,7 @@ const init = () => {
         quickViewLoaderDuration: 1,
   
         // secondaryColor: 'red',
-        sectionId: window.DYO?.section?.toString(),
+        sectionId: sectionIdFromReq || window.DYO?.section?.toString(),
   
         // selectedStrategy: '258333',
         similarItemsResponse: 'Here are some simi items',
@@ -44,7 +50,7 @@ const init = () => {
         suggestion5 : 'Surprise me again',
         suggestion6: '',
         welcomeMessage: 'eresres',
-        widgetId: '365301'
+        widgetId: widgetIdFromReq || '365301'
       });
       muse.openDyChat();
     });
