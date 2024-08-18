@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+
+    const sectionId = urlParams.get('sectionId') || 8788335;
+    const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = `//cdn.dynamicyield.com/api/${sectionId}/api_dynamic.js`;
+      const script2 = document.createElement('script');
+      script2.type = 'text/javascript';
+      script2.src = `//cdn.dynamicyield.com/api/${sectionId}/api_dynamic.js`;
+      // Append the script to the head or body
+      document.head.appendChild(script);
+      document.head.appendChild(script2);
+      </script>
     <link
       rel="preconnect"
       href="//cdn.dynamicyield.com"
@@ -25,18 +39,11 @@
       rel="dns-prefetch"
       href="//rcom.dynamicyield.com"
     />
-    <script
-      type="text/javascript"
-      src="//cdn.dynamicyield.com/api/8788335/api_dynamic.js"
-    ></script>
     <script>
       window.DY = window.DY || {};
       DY.recommendationContext = { type: 'HOMEPAGE' };
     </script>
-    <script
-      type="text/javascript"
-      src="//cdn.dynamicyield.com/api/8788335/api_static.js"
-    ></script>
+
     <meta charset="UTF-8" />
     <link
       rel="icon"

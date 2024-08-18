@@ -5,10 +5,10 @@ const init = () => {
     document.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
 
-      const feedIdFromReq = urlParams.get('f');
-      const sectionIdFromReq = urlParams.get('s');
-      const widgetIdFromReq = urlParams.get('w');
-      
+      const feedIdFromReq = urlParams.get('f') || '91017';
+      const sectionIdFromReq = urlParams.get('s')  || window.DYO?.section?.toString();
+      const widgetIdFromReq = urlParams.get('w') || '365301';
+
       const muse = new ShoppingMuse({
         color: '#ff0000',
         currencySymbol: '$',
@@ -18,7 +18,7 @@ const init = () => {
         disclaimerUrl1 : 'www.google.com',
         disclaimerUrl2 : 'https://www.google.com',
         elementsToHide: [],
-        feedId: feedIdFromReq || '91017',
+        feedId: feedIdFromReq,
   
         font : 'Inter',
   
@@ -28,7 +28,7 @@ const init = () => {
   
         isTestModeEnabled: true,
   
-        name: 'eresrwe',
+        name: 'Demo site',
   
         placeholderText: 'What are you looking for?',
   
@@ -39,7 +39,7 @@ const init = () => {
         quickViewLoaderDuration: 1,
   
         // secondaryColor: 'red',
-        sectionId: sectionIdFromReq || window.DYO?.section?.toString(),
+        sectionId: sectionIdFromReq,
   
         // selectedStrategy: '258333',
         similarItemsResponse: 'Here are some simi items',
@@ -50,7 +50,7 @@ const init = () => {
         suggestion5 : 'Surprise me again',
         suggestion6: '',
         welcomeMessage: 'eresres',
-        widgetId: widgetIdFromReq || '365301'
+        widgetId: widgetIdFromReq 
       });
       muse.openDyChat();
     });
