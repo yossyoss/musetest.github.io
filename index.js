@@ -4,7 +4,18 @@ import ShoppingMuse from './chat.js'
 const init = () => {
     document.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
-
+      const sectionId = urlParams.get('sectionId') || 8788335;
+      const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = `//cdn.dynamicyield.com/api/${sectionId}/api_dynamic.js`;
+        const script2 = document.createElement('script');
+        script2.type = 'text/javascript';
+        script2.src = `//cdn.dynamicyield.com/api/${sectionId}/api_dynamic.js`;
+        // Append the script to the head or body
+        document.head.appendChild(script);
+        document.head.appendChild(script2);
+        window.DY = window.DY || {};
+        DY.recommendationContext = { type: 'HOMEPAGE' };
       const feedIdFromReq = urlParams.get('f') || '91017';
       const sectionIdFromReq = urlParams.get('s')  || window.DYO?.section?.toString();
       const widgetIdFromReq = urlParams.get('w') || '365301';
