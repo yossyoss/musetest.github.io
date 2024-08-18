@@ -4,7 +4,7 @@ import ShoppingMuse from './chat.js'
 const init = () => {
     document.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
-
+      const selectedStrategy = urlParams.get('selectedStrategy')
       const feedIdFromReq = urlParams.get('f') || '91017';
       const sectionIdFromReq = urlParams.get('s')  || window.DYO?.section?.toString();
       const widgetIdFromReq = urlParams.get('w') || '365301';
@@ -19,7 +19,7 @@ const init = () => {
         disclaimerUrl2 : 'https://www.google.com',
         elementsToHide: [],
         feedId: feedIdFromReq,
-  
+        selectedStrategy,
         font : 'Inter',
   
         image: 'https://logowik.com/content/uploads/images/t_hm9158.logowik.com.webp',
