@@ -11,16 +11,15 @@ script.type = 'text/javascript';
 script2.type = 'text/javascript';
 script.src = `//cdn.dynamicyield.com/api/${sectionId}/api_dynamic.js`;
 script2.src = `//cdn.dynamicyield.com/api/${sectionId}/api_static.js`;
+   // Append the script to the head or body
+   document.head.appendChild(script);
+   document.head.appendChild(script2);
+   const selectedStrategy = urlParams.get('selectedStrategy')
+   const feedIdFromReq = urlParams.get('f') || '91017';
+   const sectionIdFromReq = urlParams.get('s')  || window.DYO?.section?.toString();
+   const widgetIdFromReq = urlParams.get('w') || '365301';
 const init = () => {
-      // Append the script to the head or body
-      document.head.appendChild(script);
-      document.head.appendChild(script2);
-      const selectedStrategy = urlParams.get('selectedStrategy')
-      const feedIdFromReq = urlParams.get('f') || '91017';
-      const sectionIdFromReq = urlParams.get('s')  || window.DYO?.section?.toString();
-      const widgetIdFromReq = urlParams.get('w') || '365301';
     document.addEventListener('DOMContentLoaded', () => {      
-
       const muse = new ShoppingMuse({
         color: '#ff0000',
         currencySymbol: '$',
