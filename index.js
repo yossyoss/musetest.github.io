@@ -1,19 +1,17 @@
 import ShoppingMuse from './chat.js'
 
-
+const urlParams = new URLSearchParams(window.location.search);
+const sectionId = urlParams.get('sectionId') || 8788335;
+window.DY = window.DY || {};
+DY.recommendationContext = { type: 'HOMEPAGE' };
+// Dynamically create the script element
+const script = document.createElement('script');
+const script2 = document.createElement('script');
+script.type = 'text/javascript';
+script2.type = 'text/javascript';
+script.src = `//cdn.dynamicyield.com/api/${sectionId}/api_dynamic.js`;
+script2.src = `//cdn.dynamicyield.com/api/${sectionId}/api_static.js`;
 const init = () => {
-  const urlParams = new URLSearchParams(window.location.search);
-      const sectionId = urlParams.get('sectionId') || 8788335;
-      window.DY = window.DY || {};
-      DY.recommendationContext = { type: 'HOMEPAGE' };
-      // Dynamically create the script element
-      const script = document.createElement('script');
-      const script2 = document.createElement('script');
-      script.type = 'text/javascript';
-      script2.type = 'text/javascript';
-      script.src = `//cdn.dynamicyield.com/api/${sectionId}/api_dynamic.js`;
-      script2.src = `//cdn.dynamicyield.com/api/${sectionId}/api_static.js`;
-
       // Append the script to the head or body
       document.head.appendChild(script);
       document.head.appendChild(script2);
@@ -75,5 +73,7 @@ const init = () => {
   //   // });
   // };
   
+setTimeout(()=>{
   init();
+},0)
   
