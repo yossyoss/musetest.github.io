@@ -65,7 +65,7 @@ const init = () => {
           widgetId: widgetIdFromReq 
         });
         muse.openDyChat();
-      },0)
+      },100)
     });
   };
   //   // window.DYO.smartObject('muse dynamic content', {
