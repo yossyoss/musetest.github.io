@@ -72,7 +72,5 @@ const init = () => {
   //   // });
   // };
   
-setTimeout(()=>{
   init();
-},0)
   
